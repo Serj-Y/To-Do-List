@@ -5,7 +5,7 @@ import { FilterValuesType, TaskType } from "../Common/Types/TaskType";
 type PropsType = {
     title: string
     tasks: Array<TaskType>
-    removeTask: (id: number) => void
+    removeTask: (id: string) => void
     changeFilter: (value: FilterValuesType) => void
 
 }
@@ -18,8 +18,8 @@ export function Todolist(props: PropsType) {
                 <input />
                 <button>+</button>
             </div >
-            <ul  >
-                {props.tasks.map( t => <li>
+            <ul >
+                {props.tasks.map( t => <li key={t.id}>
                     <input type="checkbox"  defaultChecked={t.isDone} />
                     <span>{t.title}</span>
                     <button onClick={()=>{ props.removeTask(t.id)}} >x</button></li>)}
