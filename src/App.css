@@ -1,12 +1,35 @@
-.App{
-padding: 30px;
-display: flex;
-
-
-}
-.App div{
-text-align: center;
-  padding: 10px;
+.App {
+  margin: auto;
+  padding: 30px;
+  display: flex;
 }
 
+.App div {
+  margin-right: 50px;
+}
+
+.error {
+  border: red 1px solid;
+}
+
+.error-message {
+  color: red;
+}
+
+.active-filter {
+  font-size: larger; 
+}
+
+.is-done {
+  opacity: 0.4;
+}
+
+button {
+  text-decoration: solid;
+  margin: 1px;
+  border-radius: 5px;
+  border-color: black;
+  background-color: black;
+  color: aliceblue;
+}
 

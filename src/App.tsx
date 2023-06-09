@@ -3,6 +3,7 @@ import "./App.css";
 import { Todolist } from "./Component/To-do-list/To-Do-List";
 import { FilterValuesType, TaskType } from './Component/Common/Types/TaskType';
 import { v1 } from 'uuid';
+
 function App() {
 
   let [tasks, setTasks] = useState<Array<TaskType>>([
@@ -55,6 +56,7 @@ setTasks(copy)
         changeFilter={changeFilter}
         addTask={addTask}
         changeStatus={changeStatus}
+        filter={filter}
       />
     </div>
   );
