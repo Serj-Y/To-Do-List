@@ -22,8 +22,16 @@ function App() {
     let newTask = { id: v1(), title: title, isDone: false }
     let newTasks = [newTask, ...tasks]
     setTasks(newTasks)
-
   }
+  function changeStatus(taskId: string, isDone: boolean) {
+    let task = tasks.find(t => t.id === taskId)
+if (task) {
+  task.isDone = isDone
+}
+let copy = [...tasks]
+setTasks(copy)
+  } 
+    
 
   function changeFilter(value: FilterValuesType) {
     setFilter(value)
@@ -46,9 +54,10 @@ function App() {
         removeTask={removeTask}
         changeFilter={changeFilter}
         addTask={addTask}
+        changeStatus={changeStatus}
       />
     </div>
   );
 }
 
-export default App;
+export default App
