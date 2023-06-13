@@ -2,6 +2,7 @@
   margin: auto;
   padding: 30px;
   display: flex;
+
 }
 
 .App div {
@@ -9,11 +10,18 @@
 }
 
 .error {
-  border: red 1px solid;
+  border-radius: 5px;
+  border: #E2FF65 2px solid;
 }
 
 .error-message {
-  color: red;
+  color: #E2FF65;
+
+}
+
+.Input {
+  border-radius: 5px;
+background-color: #DFE3EE;
 }
 
 .active-filter {
@@ -28,8 +36,8 @@ button {
   text-decoration: solid;
   margin: 1px;
   border-radius: 5px;
-  border-color: black;
-  background-color: black;
-  color: aliceblue;
+  border-color:  #122543;
+  background-color: #122543;
+  color: #DFE3EE;
 }
 

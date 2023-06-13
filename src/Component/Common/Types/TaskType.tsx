@@ -12,4 +12,6 @@ export type TodolistType = {
     title: string;
     filter: FilterValuesType;
 };
-
+export type TaskStateType = {
+    [key: string]: Array<TaskType>
+  };
