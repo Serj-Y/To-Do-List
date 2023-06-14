@@ -7,6 +7,7 @@ import { TodolistType } from './Component/Common/Types/TaskType';
 import { AddItemForm } from './Component/Common/AddItemForm';
 
 
+
 function App() {
 
   function removeTask(id: string, todolistId: string) {
@@ -29,6 +30,15 @@ function App() {
     let task = tasks.find(t => t.id === taskId)
     if (task) {
       task.isDone = isDone
+      setTasks({ ...tasksObj })
+    }
+  }
+
+  function changeTaskTitle(id: string, newTitle: string, todolistId: string) {
+    let tasks = tasksObj[todolistId]
+    let task = tasks.find(t => t.id === id)
+    if (task) {
+      task.title = newTitle
       setTasks({ ...tasksObj })
     }
   }
@@ -105,6 +115,7 @@ function App() {
             changeStatus={changeStatus}
             filter={tl.filter}
             removeTodolist={removeTodolist}
+            changeTaskTitle={changeTaskTitle}
           />
         })
       }
