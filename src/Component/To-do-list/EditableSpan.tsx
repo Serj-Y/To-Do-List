@@ -15,13 +15,13 @@ export function EditableSpan(props: EditableSpanPropsType) {
         setTitle(props.title)
     }
     const editModeOff = () => {
-        setEditMode(false) 
+        setEditMode(false)
         props.onChange(title)
-       
+
     }
     const onChangeTitleHandler = (e: ChangeEvent<HTMLInputElement>) => setTitle(e.currentTarget.value)
 
     return editMode
-        ? <input autoFocus onBlur={editModeOff} onChange={onChangeTitleHandler} value={title} className="Input" />
+        ? <input autoFocus onBlur={editModeOff} onChange={onChangeTitleHandler} value={title} className="input" />
         : <span onDoubleClick={editModeOn}  >{props.title}</span>
 }

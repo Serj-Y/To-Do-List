@@ -1,4 +1,7 @@
+import { ThemeProvider } from "@mui/material";
+import Button from "@mui/material/Button";
 import React, { ChangeEvent, useState, KeyboardEvent } from "react";
+import { OwnTheme } from "../To-do-list/To-Do-List";
 
 type AddItemFormPropsType = {
     addItem: (title: string) => void;
@@ -29,15 +32,17 @@ export function AddItemForm(props: AddItemFormPropsType) {
     };
 
     return (
-        <div>
-            <input
-                value={newTaskTitle}
-                onChange={onChangeHandler}
-                onKeyDown={onKeyDownHandler}
-                className={error ? "error" : "Input"} />
-            <button onClick={addTask}>+</button>
-
-            {error && <div className="error-message">{error}</div>}
+        <div >
+            <ThemeProvider theme={OwnTheme}>
+                <input
+                    placeholder="..."
+                    value={newTaskTitle}
+                    onChange={onChangeHandler}
+                    onKeyDown={onKeyDownHandler}
+                    className={error ? "error" : "input"} />
+                <Button size="small" variant="contained" onClick={addTask}>Add</Button>
+                {error && <div className="error-message">{error}</div>}
+            </ThemeProvider>
         </div>
     );
 }

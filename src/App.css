@@ -2,42 +2,39 @@
   margin: auto;
   padding: 30px;
   display: flex;
-
+  justify-content: space-around;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  color: aliceblue;
+  background-color: #222428;
+  align-items: center;
 }
+@media screen and (max-width: 888px) {
+  .App {
+    flex-direction: column;
+    align-items: center;
 
-.App div {
-  margin-right: 50px;
+  }
 }
 
 .error {
   border-radius: 5px;
-  border: #E2FF65 2px solid;
+  border: #a80000 2px solid;
+
+  height: 28px;
+  margin: 5px;
 }
 
 .error-message {
-  color: #E2FF65;
+  color: #a80000;
+  font-weight: 600;
 
 }
 
-.Input {
+.input {
+  background-color: aliceblue;
+  border: #0b1629;
   border-radius: 5px;
-background-color: #DFE3EE;
+  height: 28px;
+  margin: 5px;
 }
-
-.active-filter {
-  font-size: larger; 
-}
-
-.is-done {
-  opacity: 0.5;
-}
-
-button {
-  text-decoration: solid;
-  margin: 1px;
-  border-radius: 5px;
-  border-color:  #122543;
-  background-color: #122543;
-  color: #DFE3EE;
-}
-
