@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Serj-Y/To-Do-List/static/css/main.45e97729.css",
-    "main.js": "/Serj-Y/To-Do-List/static/js/main.2a322a04.js",
+    "main.css": "/Serj-Y/To-Do-List/static/css/main.547008f8.css",
+    "main.js": "/Serj-Y/To-Do-List/static/js/main.69600cbc.js",
     "static/js/787.34d05ddd.chunk.js": "/Serj-Y/To-Do-List/static/js/787.34d05ddd.chunk.js",
     "index.html": "/Serj-Y/To-Do-List/index.html",
-    "main.45e97729.css.map": "/Serj-Y/To-Do-List/static/css/main.45e97729.css.map",
-    "main.2a322a04.js.map": "/Serj-Y/To-Do-List/static/js/main.2a322a04.js.map",
+    "main.547008f8.css.map": "/Serj-Y/To-Do-List/static/css/main.547008f8.css.map",
+    "main.69600cbc.js.map": "/Serj-Y/To-Do-List/static/js/main.69600cbc.js.map",
     "787.34d05ddd.chunk.js.map": "/Serj-Y/To-Do-List/static/js/787.34d05ddd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.45e97729.css",
-    "static/js/main.2a322a04.js"
+    "static/css/main.547008f8.css",
+    "static/js/main.69600cbc.js"
   ]
 }
