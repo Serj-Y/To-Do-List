@@ -2,6 +2,7 @@ import { ThemeProvider } from "@mui/material";
 import Button from "@mui/material/Button";
 import React, { ChangeEvent, useState, KeyboardEvent } from "react";
 import { OwnTheme } from "../To-do-list/To-Do-List";
+import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
 
 type AddItemFormPropsType = {
     addItem: (title: string) => void;
@@ -40,7 +41,7 @@ export function AddItemForm(props: AddItemFormPropsType) {
                     onChange={onChangeHandler}
                     onKeyDown={onKeyDownHandler}
                     className={error ? "error" : "input"} />
-                <Button size="small" variant="contained" onClick={addTask}>Add</Button>
+                <Button size="small" variant="contained" onClick={addTask}><AddOutlinedIcon/></Button>
                 {error && <div className="error-message">{error}</div>}
             </ThemeProvider>
         </div>

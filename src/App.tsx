@@ -101,7 +101,10 @@ function App() {
 
   return (
     <div className="App">
-      <AddItemForm addItem={addTodolist} />
+   <AddItemForm addItem={addTodolist} />
+ 
+ 
+     
       {
         todolists.map((tl) => {
           let tasksForToDoList = tasksObj[tl.id];
@@ -111,8 +114,8 @@ function App() {
           if (tl.filter === "active") {
             tasksForToDoList = tasksForToDoList.filter(t => t.isDone === false)
           }
-          return (
-            <Todolist
+          return ( 
+              <Todolist
               key={tl.id}
               id={tl.id}
               title={tl.title}

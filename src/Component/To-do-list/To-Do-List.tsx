@@ -4,6 +4,7 @@ import { AddItemForm } from "../Common/AddItemForm";
 import { EditableSpan } from "./EditableSpan";
 import { Button, Checkbox, FormControl, FormControlLabel, Radio, RadioGroup, createTheme } from "@mui/material";
 import { ThemeProvider } from '@mui/material/styles';
+import ClearOutlinedIcon from '@mui/icons-material/ClearOutlined';
 
 
 
@@ -72,21 +73,21 @@ export function Todolist(props: PropsType) {
         <div>
             <ThemeProvider theme={OwnTheme}>
                 <FormControl >
-                    <h2><EditableSpan title={props.title} onChange={changeTodolistTitle} /> <Button size="small" variant="outlined" onClick={removeTodolist} >X</Button> </h2>
+                    <h2><EditableSpan title={props.title} onChange={changeTodolistTitle} /> <Button size="small" variant="outlined" onClick={removeTodolist} ><ClearOutlinedIcon  /></Button> </h2>
                     <AddItemForm addItem={addTask} />
-                    <ul >
+                    <div >
                         {props.tasks.map(t => {
                             const onRemoveHandler = () => props.removeTask(t.id, props.id)
                             const onChangeTitleHandler = (newValue: string) => { props.changeTaskTitle(t.id, newValue, props.id) }
                             const onChangeStatusHandler = (e: ChangeEvent<HTMLInputElement>) => props.changeStatus(t.id, e.currentTarget.checked, props.id)
 
-                            return <li key={t.id} >
+                            return <div key={t.id} >
                                 <Checkbox inputProps={{ 'aria-label': 'controlled' }} onChange={onChangeStatusHandler} checked={t.isDone} />
                                 <EditableSpan title={t.title} onChange={onChangeTitleHandler} />
-                                <Button size="small" variant="outlined" onClick={onRemoveHandler}>x</Button>
-                            </li>
+                                <Button size="small" variant="outlined"  onClick={onRemoveHandler}><ClearOutlinedIcon  /></Button>
+                            </div>
                         })}
-                    </ul>
+                    </div>
                     <RadioGroup defaultValue="all" name="radio-buttons-group" row>
                         <FormControlLabel value="all" control={<Radio onChange={onAllClickHandler} />} label="All" />
                         <FormControlLabel value="active" control={<Radio onChange={onActiveClickHandler} />} label="Active" />
