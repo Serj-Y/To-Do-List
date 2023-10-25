@@ -6,9 +6,8 @@
   min-height: 100vh;
   color: aliceblue;
   background-color: #222428;
- 
-
 }
+
 @media screen and (max-width: 888px) {
   .App {
     flex-direction: column;
@@ -16,9 +15,6 @@
 
   }
 }
-
-
-
 
 .error {
   border-radius: 5px;
@@ -31,7 +27,6 @@
 .error-message {
   color: #a80000;
   font-weight: 600;
-
 }
 
 .input {
